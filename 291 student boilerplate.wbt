@@ -1,0 +1,199 @@
+#VRML_SIM R2022a utf8
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.47513467237341034 0.53050044208126 -0.7020087777657767 1.8120094653981187
+  position -0.15188918083742342 2.3687425360867205 4.030014137332303
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 6 3
+  floorAppearance OsbWood {
+  }
+}
+WoodenBox {
+  translation 1.5 -0.4 0.3
+}
+UR5e {
+  translation 1.5 -0.4 0.6
+  controller "3"
+  toolSlot [
+    Robotiq3fGripper {
+    }
+    DistanceSensor {
+      translation 0 0.095 0.04
+      rotation 0 0 1 1.5707996938995747
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 1 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.01 0.01 0.01
+          }
+        }
+      ]
+    }
+    Transform {
+      translation 0 0.092 -0.04
+      rotation 0 1 0 0
+      children [
+        Camera {
+          rotation 0 0 1 1.5707996938995747
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 1 0
+                roughness 1
+                metalness 0
+              }
+              geometry Box {
+                size 0.01 0.01 0.01
+              }
+            }
+          ]
+          width 400
+          height 400
+          recognition Recognition {
+            maxRange 0.5
+          }
+        }
+      ]
+    }
+  ]
+}
+ConveyorBelt {
+  translation 0 0.4 0
+  size 5 0.5 0.5
+  speed 0.1
+}
+Solid {
+  translation -0.000402 0.4 0.549559
+  rotation 1.1391292992070957e-12 -1 1.4996500057286984e-11 7.484157865988147e-06
+  children [
+    DEF red_box Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "red solid 1"
+  boundingObject USE red_box
+  physics Physics {
+  }
+  recognitionColors [
+    1 0 0
+  ]
+}
+Solid {
+  translation -0.850402 0.4 0.549557
+  rotation 1.1391292992070957e-12 -1 1.4996500057286984e-11 7.484157865988147e-06
+  children [
+    DEF red_box Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "red solid 1(1)"
+  boundingObject USE red_box
+  physics Physics {
+  }
+  recognitionColors [
+    1 0 0
+  ]
+}
+Solid {
+  translation 0.389598 0.4 0.549561
+  rotation 1.3671116505619913e-11 -1 1.3126035648811883e-12 7.484157862126357e-06
+  children [
+    DEF red_box Shape {
+      appearance PBRAppearance {
+        baseColor 0 1 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "green solid 1"
+  boundingObject USE red_box
+  physics Physics {
+  }
+  recognitionColors [
+    0 1 0
+  ]
+}
+Solid {
+  translation -0.420402 0.4 0.549563
+  rotation 1.3671116505619913e-11 -1 1.3126035648811883e-12 7.484157862126357e-06
+  children [
+    DEF red_box Shape {
+      appearance PBRAppearance {
+        baseColor 0 1 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "green solid 1(1)"
+  boundingObject USE red_box
+  physics Physics {
+  }
+  recognitionColors [
+    0 1 0
+  ]
+}
+Solid {
+  translation -0.420402 0.4 0.549563
+  rotation 1.3671116505619913e-11 -1 1.3126035648811883e-12 7.484157862126357e-06
+  children [
+    DEF red_box Shape {
+      appearance PBRAppearance {
+        baseColor 0 1 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "blue solid"
+  boundingObject USE red_box
+  physics Physics {
+  }
+  recognitionColors [
+    0 0 1
+  ]
+}
+MetalStorageBox {
+  name "red storage box"
+  translation 2.4 -0.2 0
+  rotation 0 0 1 1.57
+}
+MetalStorageBox {
+  name "green storage box"
+  translation 2.4 -0.9 0
+  rotation 0 0 1 1.57
+}
